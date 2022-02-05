@@ -1,0 +1,74 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+  
+
+
+    //Declare variable
+            string salesPersonName;
+
+            double salesAmount;
+
+            double salesPerformance;
+
+            Console.WriteLine("Enter sales person's name");
+
+            salesPersonName =  Console.ReadLine();
+
+
+
+            Console.WriteLine("Enter sales person's amount");
+
+            salesAmount = Convert.ToDouble( Console.ReadLine() );
+
+            //calculation
+            salesPerformance = 200 + (0.09 * salesAmount);
+
+            //conditional statement
+            Console.WriteLine("Sales performance value ${0}", salesPerformance);
+                        
+           
+//            $0–2999 - Poor 
+//c) $3000–4999 - Average
+//d) $5000–9999 - Good
+//e) $10000–14999 - Excellent
+//f) $15000 and above – Outstanding
+// && and, || or, > grt than, < ls thn
+
+
+
+
+            if (salesAmount > 0 && salesAmount <= 2999)
+            {
+                Console.WriteLine("{0}'s commission is ${1} ", salesPersonName, salesPerformance);
+                Console.WriteLine("Poor performance");
+            }
+            else if (salesAmount >= 3000 && salesAmount <= 4999)
+            {
+                //action
+                Console.WriteLine("{0}'s commission is ${1} ", salesPersonName, salesPerformance);
+                Console.WriteLine("Average performance");
+
+            }
+            else if (salesAmount >= 5000 && salesAmount <= 9999)
+            {
+                //action
+                Console.WriteLine("{0}'s commission is ${1} ", salesPersonName, salesPerformance);
+                Console.WriteLine("Good performance");
+
+            }
+            else if (salesAmount >= 10000 && salesAmount <= 14999)
+            {
+                //action
+                Console.WriteLine("{0}'s commission is ${1} ", salesPersonName, salesPerformance);
+                Console.WriteLine("Excellent performance");
+            }
+            else
+            {
+                Console.WriteLine("Outsatnding performance");
+
+            }
+
+  }
+}

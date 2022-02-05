@@ -1,0 +1,34 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    double temperature;
+
+    double temperatureInFahnreit;
+
+    Console.WriteLine ("Enter your temperature in celsius");
+
+    temperature = Convert.ToDouble( Console.ReadLine());
+
+    //Calculation
+    temperatureInFahnreit = (temperature * 9/5) + 32;
+
+    //conditional statement
+    Console.WriteLine("temperature in Fah..... is {0}",temperatureInFahnreit);
+
+    if(temperatureInFahnreit < 32)
+    {
+      Console.WriteLine("This temperature is below freezing of 32 degrees Fahnreit");
+    }
+    else if(temperatureInFahnreit > 212)
+    {
+      Console.WriteLine("This temperature is above boiling point of 212 degrees Fahnreit");
+    }
+    else
+    {
+      Console.WriteLine("Your temperature in Fahnreit is {0}", temperatureInFahnreit);
+    }
+
+  }
+}

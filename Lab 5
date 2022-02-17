@@ -1,0 +1,143 @@
+Lab 5a
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    double distance;
+    double time;
+    double speed1,speed2,speed3,speed4,speed5,speed6,speed7, total;
+    double average;
+
+    Console.WriteLine ("Enter the distance covered by Car#1");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#1");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed1 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed1 + " miles per hour");
+
+    Console.WriteLine ("Enter the distance covered by Car#2");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#2");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed2 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed2);
+
+    Console.WriteLine ("Enter the distance covered by Car#3");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#3");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed3 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed3);
+
+    Console.WriteLine ("Enter the distance covered by Car#4");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#4");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed4 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed4);
+
+    Console.WriteLine ("Enter the distance covered by Car#5");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#5");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed5 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed5);
+
+    Console.WriteLine ("Enter the distance covered by Car#6");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#6");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed6 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed6);
+
+    Console.WriteLine ("Enter the distance covered by Car#7");
+    distance = Convert.ToDouble(Console.ReadLine());
+
+    Console.WriteLine ("Enter the time taken by Car#7");
+    time = Convert.ToDouble(Console.ReadLine());
+
+    speed7 = distance / time;
+
+    Console.WriteLine ("The speed of this car is " + speed7);
+
+    total= (speed1+speed2+speed3+speed4+speed5+speed6+speed7);
+    average= total/7;
+    Console.WriteLine ("The average speed of the seven cars is " +average);
+
+  }
+}
+
+Lab 5b
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+  
+    double distance;
+    double time;
+    double speed;
+    double total=0;
+    double average;
+    int num;
+    Console.WriteLine ("Enter the number of cars to be calculated");
+    num = Convert.ToInt32(Console.ReadLine());
+
+    for (int i=1;i<=num;i++){
+      Console.WriteLine ("Enter the distance covered by Car#"+ i);
+    distance = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine ("Enter the time taken", i);
+    time = Convert.ToDouble(Console.ReadLine());
+    speed = distance / time;
+    Console.WriteLine ("The speed of this car is " + speed + " miles per hour");
+    total=total+speed;
+    }
+    average= total/num;
+    Console.WriteLine ("The average speed of the cars is " +average);
+    
+  }
+  }
+
+Lab 5c
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    int numberP;
+    Console.WriteLine("Enter a number to be checked");
+    numberP = Convert.ToInt32(Console.ReadLine());
+    if (numberP == 0 || numberP == 1){
+    Console.WriteLine(numberP + " is not prime number");
+      Console.ReadLine(); }
+    else{
+    for (int a = 2; a <= numberP / 2; a++) {
+      if (numberP % a == 0){
+        Console.WriteLine(numberP + " is not prime number");
+        return;
+        }
+    }
+    Console.WriteLine(numberP + " is a prime number");
+      Console.ReadLine();
+      }
+  }
+}

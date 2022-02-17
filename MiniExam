@@ -1,0 +1,43 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    string namePerson;
+    double heightInInches;
+    double weightInPounds;
+    double bmi=0;
+    int num;
+    
+    Console.WriteLine ("Enter the number of clients to be checked");
+    num = Convert.ToInt32(Console.ReadLine());
+    for (int i=1;i<=num;i++)
+      {
+      Console.WriteLine ("Enter the name of the person#"+i);
+    namePerson = Console.ReadLine();
+      Console.WriteLine ("Enter the height of person#"+ i);
+ heightInInches = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine ("Enter the weight of person#" +i);  
+weightInPounds=Convert.ToDouble(Console.ReadLine());
+    bmi = (703 * weightInPounds) / (heightInInches * heightInInches);
+      if (bmi<18.5)
+      {
+        Console.WriteLine("You are underweight with bmi " + bmi);
+      }
+      else if (bmi >=18.5 && bmi<=24.9)
+      {
+        Console.WriteLine("You have normal weight with bmi " + bmi);
+      }
+        
+      else if (bmi >25 && bmi<=29.9)
+      {
+        Console.WriteLine("You are overweight with bmi " + bmi);
+      }
+        
+      else
+      {
+        Console.WriteLine("You are obese with bmi " + bmi);
+      }
+        
+    }
+  }
+}
